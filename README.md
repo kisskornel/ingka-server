@@ -56,13 +56,13 @@
    </tr>
   <tr>
     <td>
-      <p>0.9.7</p>
+      <p>0.9.9</p>
       </td>
     <td>
-      <p>7495842fd192b743400939f3f3bdb43a14da735c1a733fc6c0d943d61127ea41</p>
+      <p>531272bd78668eb06ae13e7dd7b49bcc1a5bf421c803c3fea33184cacd78fcee</p>
     </td>
     <td>
-      docker pull kisskornel/ingka-server:0.9.7
+      docker pull kisskornel/ingka-server:0.9.9
      </td>
    </tr>
 </table>
