@@ -61,22 +61,22 @@ __wm.bt(700,27,25,2,"web","http://secure.ikea.com/","20090727220855",1996,"/_sta
       <div class="leftText">
 	      <b>This site is unavailable<br>This site is being updated and is currently unavailable.<br>Please, visite us again soon!</b>
 	      <br><br>This text is also available in:<br>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#da">Dansk</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#de">Deutsch</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#fr">Français</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#es">Español</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#pt">Português</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#cs">Češtině</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#fi">Suomen kieli</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#hu">Magyar</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#it">Italiano</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#ni">Nederlands</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#pi">Polsku</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#ru">Русский</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#sk">Slovinský</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#sv">Svenska</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#no">Norsk</a>
-	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="/#ch">中文</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#da">Dansk</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#de">Deutsch</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#fr">Français</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#es">Español</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#pt">Português</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#cs">Češtině</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#fi">Suomen kieli</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#hu">Magyar</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#it">Italiano</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#ni">Nederlands</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#pi">Polsku</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#ru">Русский</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#sk">Slovinský</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#sv">Svenska</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#no">Norsk</a>
+	      <br><img height="6" alt="" src="./Page_style/arrowred8x6.gif" width="8" border="0">&nbsp;<a class="Link1" href="#ch">中文</a>
 	  </div></td>
     <td class="rightImage" valign="top" align="right"><img height="279" alt="" src="./Page_style/ERROR_25.JPG" width="279" border="0"></td>
   </tr>
