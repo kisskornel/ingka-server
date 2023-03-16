@@ -1,0 +1,52 @@
+.leftSeparator {
+	BORDER-RIGHT: #ffffff 1px solid; BORDER-TOP: #ffffff 2px solid; WIDTH: 279px; BORDER-BOTTOM: #ffffff 2px solid; HEIGHT: 11px; BACKGROUND-COLOR: #99ccff
+}
+.rightSeparator {
+	BORDER-TOP: #ffffff 2px solid; BORDER-LEFT: #ffffff 1px solid; WIDTH: 279px; BORDER-BOTTOM: #ffffff 2px solid; HEIGHT: 11px; BACKGROUND-COLOR: #99ccff
+}
+.leftText {
+	PADDING-RIGHT: 10px; PADDING-BOTTOM: 30px; PADDING-TOP: 10px
+}
+.rightImage {
+	BACKGROUND-IMAGE: url(/web/20070420175647im_/http://a4.g.akamai.net/ms/img/misc/white279x281.gif); BORDER-LEFT: #ffffff 1px solid; BACKGROUND-REPEAT: no-repeat; BACKGROUND-COLOR: #eeeded
+}
+.styledropnav {
+	FONT-SIZE: 11px; WIDTH: 175px; COLOR: #333333; FONT-FAMILY: Arial,Helvetica,Geneva
+}
+.drop2 {
+	FONT-SIZE: 11px; WIDTH: 130px; COLOR: #333333; FONT-FAMILY: Arial,Helvetica,Geneva
+}
+.input1 {
+	FONT-SIZE: 11px; WIDTH: 175px; COLOR: #333333; FONT-FAMILY: Arial,Helvetica,Geneva
+}
+.btnOrange {
+	MARGIN-TOP: 10px; FONT-WEIGHT: bold; FONT-SIZE: 13px; MARGIN-BOTTOM: 10px; COLOR: #000000; FONT-FAMILY: Arial,Helvetica,Geneva; BACKGROUND-COLOR: #ffcc00
+}
+.btn {
+	MARGIN-TOP: 10px; FONT-SIZE: 13px; MARGIN-BOTTOM: 10px; COLOR: #000000; FONT-FAMILY: Arial,Helvetica,Geneva
+}
+.btnWhite {
+	MARGIN-TOP: 10px; FONT-WEIGHT: bold; FONT-SIZE: 13px; MARGIN-BOTTOM: 10px; COLOR: #000000; FONT-FAMILY: Arial,Helvetica,Geneva; BACKGROUND-COLOR: #ffffff
+}
+
+/*
+     FILE ARCHIVED ON 17:56:47 Apr 20, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:37:54 Jan 16, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 248.981
+  exclusion.robots: 0.086
+  exclusion.robots.policy: 0.078
+  RedisCDXSource: 0.789
+  esindex: 0.009
+  LoadShardBlock: 215.303 (3)
+  PetaboxLoader3.resolve: 219.959 (3)
+  PetaboxLoader3.datanode: 168.048 (4)
+  CDXLines.iter: 29.518 (3)
+  load_resource: 191.131
+*/

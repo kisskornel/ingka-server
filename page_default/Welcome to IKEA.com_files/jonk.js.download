@@ -1,0 +1,327 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+<!--
+//check browser
+var w3c = false;
+var ie = false;
+var ns = false;
+if (document.getElementById) {
+	var w3c = true;
+}
+if (document.all) {
+	var ie = true;
+}
+if (document.layers) {
+	var ns = true;
+}
+if (w3c==false && ie==false && ns==false) {
+	alert('too old (or bad) browser. get a newer one at \n\n - www.mozilla.org \n - www.microsoft.com \n - www.netscape.com');
+	//location.href='https://web.archive.org/web/20040615003435/http://www.mozilla.org';
+}
+
+//show a hidden layer
+function showLayer(strName){
+	if (w3c) document.getElementById(strName).style.visibility = "visible";
+    else if (ie) eval(strName).style.visibility = "visible";
+ 	else if (ns) document.layers[strName].visibility = "show";
+}
+
+//hide a shown layer
+function hideLayer(strName){
+	if (w3c) document.getElementById(strName).style.visibility = "hidden";
+    else if (ie) eval(strName).style.visibility = "hidden";
+ 	else if (ns) document.layers[strName].visibility = "hide";
+}
+
+//open a layer with an image in it
+function selectImage(layerName,img){
+	showLayer(layerName);
+	innerHtmlCode = "<a href=javascript:hideLayer('" + layerName + "');><img src=" + img + " border='0'></a>";
+	
+	if (w3c){
+		document.getElementById(layerName).innerHTML=innerHtmlCode;
+	}
+	else if (ie){
+		window.layerName.innerHTML=innerHtmlCode;
+	}
+	else if (ns){
+		document.layers[layerName].document.open()
+		document.layers[layerName].document.write(innerHtmlCode)
+		document.layers[layerName].document.close()
+	}
+}
+
+//make it impossible to write anything but numbers in a form-element
+function onlyNumbers(character, warning){
+	var myAsciiCode = (navigator.appName.toLowerCase().indexOf("netscape") == 0)? character.which : character.keyCode;
+	
+	if(myAsciiCode > 47 && myAsciiCode < 58 || myAsciiCode == 8){
+		if (ns){
+		return true;
+	}
+	}else{
+		alert (warning);
+		return false;
+	}
+}
+
+//show a text onMouseOver that tags along with the mouse
+
+var layer = null;
+var isOver = false;
+ 
+var xPos;
+var yPos;
+ 
+function initBubbles() {
+	if (ns||w3c && ie!=true) {
+		document.captureEvents(Event.MOUSEMOVE);
+		document.onmousemove = setValue;
+	}
+}
+
+function setValue(evt) {
+	if (ns==true && w3c==false) {
+		xPos = evt.pageX;
+		yPos = evt.pageY;
+		//alert("X:" + xPos + "   " + "Y:" + yPos);
+			if(isOver) { 
+				document.layers["nummerDIV" + layer].visibility = "show";
+				document.layers["nummerDIV" + layer].top = yPos -20;
+				document.layers["nummerDIV" + layer].left = xPos +15;
+			} else if(!isOver) {
+				if(layer != null) {
+					document.layers["nummerDIV" + layer].visibility = "hide";
+				}
+			}
+	}
+	else if (w3c==true && ie!=true) {
+		xPos = evt.pageX;
+		yPos = evt.pageY;
+		//alert("X:" + xPos + "   " + "Y:" + yPos);
+		if(isOver) { 
+			showLayer("nummerDIV" + layer);
+			document.getElementById("nummerDIV" + layer).style.top = yPos -20;
+			document.getElementById("nummerDIV" + layer).style.left = xPos +15;
+		} else if(!isOver) {
+			if(layer != null) {
+				hideLayer("nummerDIV" + layer);
+			}
+		}
+	}
+}
+
+function dialog(what, number) {
+	if(what == "show") {
+		isOver = true;
+		layer = number;
+	} else if(what == "hide") {
+		isOver = false;
+		layer = number;
+	}
+
+	if(isOver) {
+		if(ns||w3c && ie!=true) {
+			layer = number;
+		}
+		if(ie) {
+			var xPos = event.x;
+			var yPos = event.y;
+		    showLayer("nummerDIV" + layer);
+		    eval("nummerDIV" + layer).style.pixelTop = yPos -20 + document.body.scrollTop;
+		    eval("nummerDIV" + layer).style.pixelLeft = xPos +15;
+		}
+	} else if(!isOver) {
+		hideLayer("nummerDIV" + layer);
+	}
+}
+
+
+//change a links href and linktext
+function changeLink(href,linktext,linkid) {
+	if (w3c) {
+		document.getElementById(linkid).href=href;
+		document.getElementById(linkid).innerHTML=linktext;
+	}
+	else if (ie) {
+		document.all[linkid].href=href;
+		document.all[linkid].innerText=linktext;
+	}
+	else if (ns) {
+		alert('function not supported in this browser.')
+	}
+}
+
+//change the bgColor of anything
+function changeBgColor(HexColor,linkid) {
+	if (w3c) {
+	document.getElementById(linkid).style.background=HexColor;
+	}
+	if (ie) {
+	document.getElementById(linkid).style.cursor="hand";
+	}
+}
+
+//link anything
+function linkIt(url,frameName) {
+	if (frameName=="") {
+		location.href = url;
+	} else if (frameName=="new") {
+		window.open(url)
+	} else {
+		temp = frameName + ".location.href = '" + url + "'";
+		eval (temp);
+	}
+}
+
+//open a new browser window
+function openWin(theUrl,theName, theSettings) {
+	window.open(theUrl,theName,theSettings); void(0);
+}
+
+//lock a form-element so that it can't be edited
+function lockField(falt,formName){
+	var temp = "document." + formName + "." + falt + ".blur()";
+	eval (temp);
+}
+
+//invert checkbox-selection
+function InvertAll(formName) {
+	for (var i=0;i<document.forms[formName].elements.length;i++) {
+		var e=document.forms[formName].elements[i];
+		e.checked=!e.checked;
+	}
+}
+
+//self-submitting select
+function selectBrowse(frameName,formName,selectName) {
+	var temp = "document." + formName + "." + selectName + ".options[document." + formName + "." + selectName + ".options.selectedIndex].value";
+	if (eval (temp) != "do_nothing") {
+		if (frameName=="") {
+			location.href = eval (temp);
+		} else if (frameName=="new") {
+			window.open(eval (temp))
+		} else {
+			temp = frameName + ".location.href = " + temp;
+			eval (temp);
+		}
+	}
+}
+
+//a running clock
+var flasher = false
+function updateTime() {
+	var now = new Date()
+	var theHour = now.getHours()
+	var theMin = now.getMinutes()
+	var theSec = now.getSeconds()
+	var theTime = "" + ((theHour < 10) ? "0" : "") + theHour
+		theTime += ((flasher) ? " " : ":")
+	theTime += ((theMin < 10) ? "0" : "") + theMin
+		theTime += ((flasher) ? " " : ":")
+	theTime += ((theSec < 10) ? "0" : "") + theSec
+	flasher = !flasher
+
+	var theTime;
+
+	if (w3c) {
+		document.getElementById("showTime").innerHTML=theTime
+		}
+	else if (ns) {
+		document.showTime.document.open()
+		document.showTime.document.write("<pre>" + theTime + "</pre>")
+		document.showTime.document.close()
+		}
+	else {
+		window.showTime.innerText=theTime;
+		}
+	timerID = setTimeout("updateTime()",1000)
+}
+
+//swap image
+function swapImage(imgName,imgSrc) {
+	document.images[imgName].src=imgSrc;
+}
+
+//a layer that stays on the same y position in the window
+
+function stayXY(layerName,yPos,xPos) {
+	if (w3c) {
+		document.getElementById(layerName).style.top = yPos + document.body.scrollTop;
+		document.getElementById(layerName).style.left = xPos;
+	}
+	else if (ns) {
+		document.layers[layerName].top = yPos;
+		document.layers[layerName].left = xPos;
+	}
+}
+
+//a function to select a random number from 0 to what is passed in
+function randomNumber(no) {
+	var number;
+	number = (Math.floor(Math.random() * no));
+	return number;
+}
+
+//submit a form bu pressing enter in ns as it works in w3c and ie
+function submitEnter(character,formName) {
+	if (ns && character.which == 13) {
+		document.forms[formName].submit();
+	}
+}
+
+//a function to clear an imput-field when focused, unless it's value differs from what is set as "value"
+function clearField(theInput) {
+	if (theInput.defaultValue==theInput.value) {
+		theInput.value = "";
+	}
+}
+
+//change the content of a layer
+function selectText(arrayNo,layerName){
+	if (w3c){
+		document.getElementById(layerName).innerHTML=allTxts [arrayNo];
+	}
+	else if (ie){
+		window.layerName.innerHTML=allTxts [arrayNo];
+	}
+	else if (ns){
+		document.layers[layerName].document.open()
+		document.layers[layerName].document.write(allTxts [arrayNo])
+		document.layers[layerName].document.close()
+	}
+}
+//-->
+
+}
+/*
+     FILE ARCHIVED ON 00:34:35 Jun 15, 2004 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:00:51 Jan 16, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 179.17
+  exclusion.robots: 0.109
+  exclusion.robots.policy: 0.099
+  RedisCDXSource: 32.472
+  esindex: 0.013
+  LoadShardBlock: 115.292 (3)
+  PetaboxLoader3.datanode: 91.887 (4)
+  CDXLines.iter: 18.842 (3)
+  PetaboxLoader3.resolve: 110.653 (3)
+  load_resource: 125.707
+*/
