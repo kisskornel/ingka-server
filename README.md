@@ -40,3 +40,29 @@
 </center>
 <h3>Included PHP Modules</h3>
   <p>php-cli php-fpm php-json php-pdo php-mysql php-zip php-gd  php-mbstring php-curl php-xml php-pear php-bcmath</p>
+<h6>"It's a fancy LAMP Stack."</h6>
+<a href="https://hub.docker.com/r/kisskornel/ingka-server">Docker Hub Page</a>
+<table>
+  <tr>
+    <th>
+      <p>Latest Version:</p>
+      </th>
+    <th>
+      <p>SHA256 Digest</p>
+    </th>
+      <th>
+        <p>Pull Command</p>
+      </th>
+   </tr>
+  <tr>
+    <td>
+      <p>0.9.7</p>
+      </td>
+    <td>
+      <p>7495842fd192b743400939f3f3bdb43a14da735c1a733fc6c0d943d61127ea41</p>
+    </td>
+    <td>
+      docker pull kisskornel/ingka-server:0.9.7
+     </td>
+   </tr>
+</table>
