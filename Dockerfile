@@ -31,6 +31,12 @@ RUN apt-get install wget -y
 RUN apt-get install  libapache2-mod-security2 -y
 ADD page_default/Page_style/ Page_style/
 RUN mkdir /var/www/html/error
+#INSTALL WEBMIN (Port 10000)
+RUN apt-get install curl
+RUN curl -o setup-repos.sh https://raw.githubusercontent.com/webmin/webmin/master/setup-repos.sh
+RUN sh setup-repos.sh --force
+RUN apt-get -y install webmin
+RUN rm setup-repos.sh
 #COPY Assets/Resources
 COPY page_default/index.html /var/www/html
 COPY apache2.conf /etc/apache2
