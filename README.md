@@ -62,7 +62,7 @@
       <p>ac79d442f3782f0db9900f5bb1393d1f3e5df46cf75a6d2e892f8db920914c2d</p>
     </td>
     <td>
-      docker pull kisskornel/ingka-server:1.0.0
+      docker pull kisskornel/ingka-server:1.0.1
      </td>
    </tr>
 </table>
